@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mathing</title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+</head>
+<body>
+<div ng-app="hrApp">
+<div ng-controller="MathController">
+
+    <div class="jumbotron">
+    <div class="panel-body">
+        <div class="container" ng-controller="MathController">
+            <p>Enter Number A:<input type="number" ng-model="numberA"></p>
+            <p>Enter Number B:<input type="number" ng-model="numberB"></p>
+            <p>
+                <a class="btn btn-primary btn-lg" role="button" ng-click="add()" ng-disabled="">
+                    Add</a>    <span ng-bind="suma"></span>
+            </p>
+            <p>
+                <a class="btn btn-primary btn-lg" role="button" ng-click="subtract()">
+                    Subtract</a>    <span ng-bind="subt"></span>
+            </p>
+            <p>
+                <a class="btn btn-primary btn-lg" role="button" ng-click="multiplicate()">
+                    Multiplicate</a>    <span ng-bind="mult"></span>
+            </p>
+            <p>
+                <a class="btn btn-primary btn-lg" role="button" ng-click="divide()">
+                    Divide</a>    <span ng-bind="divi"></span>
+            </p>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="../bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../scripts/app.js"></script>
+<script type="text/javascript" src="../scripts/MathController.js"></script>
+</body>
+</html>
