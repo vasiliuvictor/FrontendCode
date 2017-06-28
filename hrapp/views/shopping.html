@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop&GO</title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+</head>
+<body>
+<div ng-app="hrApp">
+    <div ng-controller="ShopController">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="#">Total price:</a>
+                <span class="navbar-brand" ng-bind="totald"></span>
+                <a class="navbar-brand" href="#" ng-click="changeView()">Go to Cart</a>
+            </div>
+        </div>
+    </nav>
+    <div ng-controller="ImageController" ng-hide="cartShow">
+        <div class="panel panel-default">
+                <div class="panel-body">
+                        <div ng-repeat="image in imageList">
+                            <img ng-src={{image.url}} style="height:150px; width:150px" ng-mouseover="priceShow=true"
+                                 ng-mouseleave="priceShow=false" ng-click='cumpara(image.name,image.url,image.price)'>
+                            <p>{{image.name}} <span ng-show="priceShow"> | Price: {{image.price}}</span></p>
+                        </div>
+
+                </div>
+            </div>
+    </div>
+
+        <div ng-include="shoppingcart.html" ng-show="cartShow"></div>
+
+
+
+    </div>
+
+
+
+</div>
+<script type="text/javascript" src="../bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../scripts/hrApp.js"></script>
+<script type="text/javascript" src="../scripts/ShopController.js"></script>
+<script type="text/javascript" src="../scripts/ImageController.js"></script>
+</body>
+</html>
