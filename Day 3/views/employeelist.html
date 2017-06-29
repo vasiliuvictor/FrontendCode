@@ -11,6 +11,7 @@
         <th>Commission</th>
         <th class="col-lg-2 text-center">Manager</th>
         <th>Department</th>
+        <th>Action</th>
         <!--TODO #HR4 add Actions column-->
         <th class="col-lg-3 text-center">Actions</th>
     </tr>
@@ -47,6 +48,9 @@
         </td>
         <td class="text-center">
             {{employee.departmentId.departmentName}}
+        </td>
+        <td class="jumbotron">
+            <button ng-click="viewEmployee(employee.employeeId)">View</button>
         </td>
         <!--TODO #HR5 add View button-->
 

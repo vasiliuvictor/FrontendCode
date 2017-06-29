@@ -1,0 +1,1 @@
+hrApp.value('inputList',[]);
