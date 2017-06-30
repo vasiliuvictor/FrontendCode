@@ -1,0 +1,29 @@
+
+
+<div>
+    <select ng-model="myColor" ng-change="changeColor()" ng-options="color.text for color in colors"></select>
+
+    <select ng-model="myColor" ng-change="changeColor()" ng-options="color.text group by color.type for color in colors">
+    </select>
+
+    <nav class="navbar navbar-default" role="navigation" ng-controller="ColorController" >
+    <div class="container-fluid">
+    <p>
+        <span ng-class="myColor.class" ng-style=""> text</span>
+
+    </p>
+
+        <input name="input" ng-model="inputA" required>
+        <input name="input" ng-model="inputB" required>
+    </div>
+    </nav>
+    <div ng-repeat="color in colors |orderBy:inputA">
+        {{color.text}}
+
+
+    </div>
+
+
+
+</div>
+
